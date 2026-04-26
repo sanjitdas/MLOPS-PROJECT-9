@@ -1,0 +1,18 @@
+<body>
+    <div class="container">
+        <h1>Smart Manufacturing Machine Efficiency Prediction</h1>
+
+        <form method="post">
+          {% for feature in features %}
+              <label for="{{ feature }}">{{ feature }}:</label>
+              <input type="text" name="{{ feature }}" required>
+          {% endfor %}
+
+          <button type="submit">PREDICT</button>
+        </form>
+
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>

@@ -1,0 +1,123 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container (portrait card) */
+.container {
+    width: 100%;
+    max-width: 380px;   /*Portrait width */
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+/* Scrollable form if many fields */
+form {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Labels */
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 12px;
+    display: block;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Focus effect */
+input:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 6px rgba(42,82,152,0.4);
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Prediction result */
+h2 {
+    margin-top: 15px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    background: #e6f7ff;
+    color: #0077cc;
+    font-size: 16px;
+}
+
+/* Smooth scroll */
+form::-webkit-scrollbar {
+    width: 5px;
+}
+form::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+}
