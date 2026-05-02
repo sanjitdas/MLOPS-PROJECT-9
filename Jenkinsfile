@@ -50,6 +50,7 @@ pipeline {
                         argocd app sync gitopsapp
                         
                     '''
+                    }
                 }
             }
         }
